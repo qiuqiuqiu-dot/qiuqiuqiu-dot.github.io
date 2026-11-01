@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人简历</title>
+    <title>个人主页</title>
     <style>
         * {
             margin: 0;
@@ -12,183 +12,227 @@
             font-family: "Microsoft Yahei", sans-serif;
         }
         body {
-            background-color: #f7fee7;
+            background-color: #ffffff;
             color: #222;
-            line-height: 1.6;
         }
-        .container {
-            width: 210mm;
-            margin: 20px auto;
-            background: #fff;
-            padding: 30px 40px;
-            box-shadow: 0 2px 10px #00000015;
+        /* 导航栏 */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 60px;
+        }
+        .logo {
+            width: 48px;
+            height: 48px;
+        }
+        nav ul {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            transition: 0.25s;
+        }
+        nav a.active {
+            background-color: #000;
+            color: #fff;
+        }
+        nav a:hover:not(.active) {
+            background-color: #f3f4f6;
+        }
+        /* 主容器 */
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px 60px;
+            min-height: 75vh;
+        }
+        .text-area {
+            flex: 1;
+        }
+        .avatar-wrap {
+            flex: 0 0 420px;
+            position: relative;
+        }
+        .avatar {
+            width: 340px;
+            border-radius: 12px;
+            /* 青绿色轮廓描边，和截图效果一致 */
+            outline: 3px solid #22d3a1;
+            outline-offset: 6px;
         }
         h1 {
-            color: #16a34a;
-            font-size: 28px;
+            font-size: 72px;
+            line-height: 1.1;
+            margin-bottom: 12px;
         }
-        .title-line {
-            color: #444;
-            font-size: 17px;
-            margin-bottom: 16px;
-        }
-        .contact {
-            font-size: 14px;
+        .subtitle {
+            font-size: 32px;
+            color: #9333ea;
             margin-bottom: 20px;
         }
-        a {
+        .desc {
+            font-size: 16px;
+            color: #555;
+            max-width: 460px;
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+        .btn-group {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+        button {
+            padding: 12px 28px;
+            border-radius: 999px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            transition: 0.2s;
+        }
+        .btn-download {
+            border: 2px solid #000;
+            background: #fff;
+        }
+        .btn-contact {
+            background-color: #dcfce7;
             color: #16a34a;
-            text-decoration: none;
         }
-        h2 {
-            border-left: 4px solid #16a34a;
-            padding-left: 10px;
-            margin: 22px 0 10px;
-            font-size: 19px;
-        }
-        .summary {
-            font-size: 14px;
-        }
-        .item {
-            margin-bottom:14px;
-            opacity:0;
-            transform: translateY(24px);
-            transition: all 0.6s ease-out;
-        }
-        .item.show{
-            opacity:1;
-            transform: translateY(0);
-        }
-        .item:hover{
-            box-shadow: 0 2px 12px rgba(22,163,74,0.12);
-            border-radius:6px;
-            padding:8px;
-            transition: 0.3s;
-        }
-        .item-head {
+        /* AI岗位匹配器 */
+        .match-box {
             display: flex;
-            justify-content: space-between;
-            font-weight: bold;
+            align-items: center;
+            gap: 12px;
+            background: #f7f8fa;
+            padding: 12px 16px;
+            border-radius: 999px;
+            max-width: 520px;
         }
-        .item-desc, .item-highlight {
-            font-size:14px;
+        .match-box input {
+            flex:1;
+            border: none;
+            background: transparent;
+            outline: none;
+            font-size:15px;
+        }
+        .match-box button {
+            background: black;
+            color:white;
+            padding:10px 22px;
+        }
+        /* Tab内容区域（切换面板） */
+        .tab-panel {
+            display: none;
+            padding: 20px 60px;
+            max-width: 1000px;
+        }
+        .tab-panel.active {
+            display: block;
+            animation: fade 0.35s ease;
+        }
+        @keyframes fade {
+            from {opacity:0; transform: translateY(12px);}
+            to {opacity:1; transform: translateY(0);}
+        }
+        .tab-panel h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .tab-panel p {
+            font-size:16px;
             color:#444;
+            line-height:1.7;
         }
-        .item-highlight li {
-            margin-left:20px;
-            margin-bottom:4px;
-        }
-        .skill-wrap {
-            display: flex;
-            flex-wrap: wrap;
-            gap:8px;
-            margin-top:6px;
-        }
-        .skill-tag {
-            background:#f0fdf4;
-            color:#16a34a;
-            padding:3px 8px;
-            border-radius:4px;
-            font-size:13px;
-            transition: transform 0.2s;
-        }
-        .skill-tag:hover{
-            transform: scale(1.08);
-        }
-
-        @media print {
-            body {background: white;}
-            .container {box-shadow:none;margin:0;padding:20px;width:100%;}
-            .item{
-                opacity:1 !important;
-                transform:none !important;
-                box-shadow:none !important;
-                padding:0 !important;
-            }
-            .skill-tag{transform:none !important;}
+        @media (max-width:900px) {
+            main {flex-direction:column;}
+            h1 {font-size:48px;}
         }
     </style>
 </head>
 <body>
-<div class="container">
-    <div class="item show">
-        <h1>你的姓名</h1>
-        <div class="title-line">求职意向：XXX | 期望地点：XXX</div>
-        <div class="contact">
-            邮箱：xxx@xxx.com | Github：<a href="#">https://github.com/xxx</a>
-        </div>
-    </div>
-
-    <div class="item">
-        <h2>个人简介</h2>
-        <p class="summary">在这里填写个人简介，描述技术方向、擅长领域、求职目标。</p>
-    </div>
-
-    <div class="item">
-        <h2>教育经历</h2>
-        <div class="item-head">学校名称 | 专业 <span>开始时间 ~ 结束时间</span></div>
-        <div class="item-desc">GPA：xx / 4.0｜排名：xx｜英语：xxx</div>
-        <div class="item-desc">主修课程：课程1、课程2、课程3</div>
-    </div>
-
-    <div class="item">
-        <h2>技能栈</h2>
-        <div class="skill-wrap">
-            <span class="skill-tag">技能1</span>
-            <span class="skill-tag">技能2</span>
-            <span class="skill-tag">技能3</span>
-            <span class="skill-tag">技能4</span>
-        </div>
-    </div>
-
-    <div class="item">
-        <h2>项目经历</h2>
-        <div class="item">
-            <div class="item-head">项目一 <span>时间</span></div>
-            <div class="item-desc">项目简单介绍，项目定位与技术栈。</div>
-            <ul class="item-highlight">
-                <li>工作点1：做了什么，达成什么效果/指标</li>
-                <li>工作点2：解决的问题、工程优化点</li>
-            </ul>
-        </div>
-
-        <div class="item">
-            <div class="item-head">项目二 <span>时间</span></div>
-            <div class="item-desc">项目简单介绍，项目定位与技术栈。</div>
-            <ul class="item-highlight">
-                <li>工作点1</li>
-                <li>工作点2</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="item">
-        <h2>奖项证书</h2>
-        <div class="item-highlight">
+    <header>
+        <div class="logo">👩</div>
+        <nav>
             <ul>
-                <li>奖项A（时间）</li>
-                <li>证书B（时间）</li>
+                <li><a href="#about" class="nav-link active" data-target="about">关于我</a></li>
+                <li><a href="#edu" class="nav-link" data-target="edu">教育背景</a></li>
+                <li><a href="#project" class="nav-link" data-target="project">项目经历</a></li>
+                <li><a href="#skill" class="nav-link" data-target="skill">技能特长</a></li>
+                <li><a href="#explore" class="nav-link" data-target="explore">学习与探索</a></li>
             </ul>
-        </div>
+        </nav>
+    </header>
+
+    <!-- 首页Hero面板（关于我） -->
+    <div class="tab-panel active" id="about">
+        <main>
+            <div class="text-area">
+                <h1>Hi，我是XXX</h1>
+                <div class="subtitle">AI视觉开发工程师</div>
+                <p class="desc">在这里填写简介，描述你的技术方向、擅长领域、求职目标。</p>
+                <div class="btn-group">
+                    <button class="btn-download">下载简历</button>
+                    <button class="btn-contact">联系我</button>
+                </div>
+                <div class="match-box">
+                    <input placeholder="粘贴您的JD，查看与岗位之间的匹配度">
+                    <button>开始匹配 →</button>
+                </div>
+            </div>
+            <div class="avatar-wrap">
+                <img class="avatar" src="https://picsum.photos/id/64/340/420" alt="头像">
+            </div>
+        </main>
     </div>
-</div>
+
+    <!-- 教育背景 -->
+    <div class="tab-panel" id="edu">
+        <h2>教育背景</h2>
+        <p>学校、专业、时间、GPA、排名、主修课程、获奖信息等内容。</p>
+    </div>
+
+    <!-- 项目经历 -->
+    <div class="tab-panel" id="project">
+        <h2>项目经历</h2>
+        <p>在这里填写你的项目，每个项目可以写项目名称、时间、技术栈、成果指标。</p>
+    </div>
+
+    <!-- 技能特长 -->
+    <div class="tab-panel" id="skill">
+        <h2>技能特长</h2>
+        <p>编程语言、框架、硬件工具、证书等技能内容。</p>
+    </div>
+
+    <!-- 学习与探索 -->
+    <div class="tab-panel" id="explore">
+        <h2>学习与探索</h2>
+        <p>学习笔记、技术博客、竞赛、开源、持续学习内容。</p>
+    </div>
 
 <script>
-const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-        if(entry.isIntersecting){
-            entry.target.classList.add('show')
+    const navLinks = document.querySelectorAll('.nav-link');
+    const panels = document.querySelectorAll('.tab-panel');
+
+    navLinks.forEach(link => {
+        link.onclick = function(e) {
+            e.preventDefault();
+            // 清除所有激活
+            navLinks.forEach(a=>a.classList.remove('active'));
+            panels.forEach(p=>p.classList.remove('active'));
+            // 当前激活
+            this.classList.add('active');
+            const targetId = this.dataset.target;
+            document.getElementById(targetId).classList.add('active');
         }
     })
-},{
-    threshold:0.1
-})
-
-document.querySelectorAll('.item').forEach(el=>{
-    observer.observe(el)
-})
-
-document.documentElement.style.scrollBehavior = "smooth"
 </script>
 </body>
 </html>
