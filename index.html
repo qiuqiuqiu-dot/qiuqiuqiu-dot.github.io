@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人主页</title>
+    <title>邱心如 - 个人主页</title>
     <style>
         * {
             margin: 0;
@@ -64,7 +64,6 @@
         .avatar {
             width: 340px;
             border-radius: 12px;
-            /* 青绿色轮廓描边，和截图效果一致 */
             outline: 3px solid #22d3a1;
             outline-offset: 6px;
         }
@@ -81,7 +80,7 @@
         .desc {
             font-size: 16px;
             color: #555;
-            max-width: 460px;
+            max-width: 520px;
             margin-bottom: 32px;
             line-height: 1.7;
         }
@@ -132,7 +131,7 @@
         .tab-panel {
             display: none;
             padding: 20px 60px;
-            max-width: 1000px;
+            max-width: 1100px;
         }
         .tab-panel.active {
             display: block;
@@ -144,16 +143,53 @@
         }
         .tab-panel h2 {
             font-size: 32px;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
-        .tab-panel p {
-            font-size:16px;
+        .block{
+            margin-bottom:28px;
+        }
+        .block h3{
+            font-size:19px;
+            margin-bottom:6px;
+            display:flex;
+            justify-content:space-between;
+        }
+        .block .time{
+            color:#777;
+            font-weight:normal;
+            font-size:15px;
+        }
+        .block p{
+            font-size:15px;
             color:#444;
-            line-height:1.7;
+            margin-bottom:8px;
+        }
+        .block ul{
+            padding-left:22px;
+            font-size:15px;
+            color:#444;
+        }
+        .block ul li{
+            margin-bottom:6px;
+        }
+        .skill-tag-group{
+            display:flex;
+            flex-wrap:wrap;
+            gap:10px;
+        }
+        .skill-tag{
+            background:#f0fdf4;
+            color:#16a34a;
+            padding:6px 12px;
+            border-radius:6px;
+            font-size:14px;
         }
         @media (max-width:900px) {
-            main {flex-direction:column;}
-            h1 {font-size:48px;}
+            main {flex-direction:column; gap:40px;}
+            h1 {font-size:42px;}
+            header{padding:16px 20px;}
+            nav ul{gap:12px;}
+            .tab-panel{padding:16px 20px;}
         }
     </style>
 </head>
@@ -166,7 +202,7 @@
                 <li><a href="#edu" class="nav-link" data-target="edu">教育背景</a></li>
                 <li><a href="#project" class="nav-link" data-target="project">项目经历</a></li>
                 <li><a href="#skill" class="nav-link" data-target="skill">技能特长</a></li>
-                <li><a href="#explore" class="nav-link" data-target="explore">学习与探索</a></li>
+                <li><a href="#explore" class="nav-link" data-target="explore">奖项证书</a></li>
             </ul>
         </nav>
     </header>
@@ -175,12 +211,15 @@
     <div class="tab-panel active" id="about">
         <main>
             <div class="text-area">
-                <h1>Hi，我是XXX</h1>
-                <div class="subtitle">AI视觉开发工程师</div>
-                <p class="desc">在这里填写简介，描述你的技术方向、擅长领域、求职目标。</p>
+                <h1>Hi，我是邱心如</h1>
+                <div class="subtitle">AI视觉软件开发</div>
+                <p class="desc">大专在读，主攻端侧AI视觉、嵌入式与全栈开发；熟悉YOLOv8、K230、Flask等技术，拥有多个完整工程项目落地经验，期望在深圳、东莞从事AI视觉、软件开发相关岗位。<br/><br/>
+邮箱：qiuqiuqiu_autumn@qq.com<br/>
+Github：github.com/qiuqiuqiu‑dot
+                </p>
                 <div class="btn-group">
-                    <button class="btn-download">下载简历</button>
-                    <button class="btn-contact">联系我</button>
+                    <a href="./resume.pdf" download><button class="btn-download">下载简历</button></a>
+                    <button class="btn-contact" onclick="location.href='mailto:qiuqiuqiu_autumn@qq.com'">联系我</button>
                 </div>
                 <div class="match-box">
                     <input placeholder="粘贴您的JD，查看与岗位之间的匹配度">
@@ -188,7 +227,6 @@
                 </div>
             </div>
             <div class="avatar-wrap">
-                <!-- 这里直接引用同目录的头像.jpg -->
                 <img class="avatar" src="./头像.jpg" alt="头像">
             </div>
         </main>
@@ -197,25 +235,108 @@
     <!-- 教育背景 -->
     <div class="tab-panel" id="edu">
         <h2>教育背景</h2>
-        <p>学校、专业、时间、GPA、排名、主修课程、获奖信息等内容。</p>
+        <div class="block">
+            <h3>深圳职业技术大学 <span class="time">2024‑09 ~ 2027‑06</span></h3>
+            <p>工业互联网技术 | 专科</p>
+            <ul>
+                <li>专业排名：10/75（前15%），GPA：3.16/4.0，英语CET‑4</li>
+                <li>主修课程：Python程序设计、人工智能应用、操作系统、计算机网络、物联网智能硬件开发、Web开发</li>
+                <li>获得国家励志奖学金、校级三等奖学金</li>
+            </ul>
+        </div>
     </div>
 
     <!-- 项目经历 -->
     <div class="tab-panel" id="project">
         <h2>项目经历</h2>
-        <p>在这里填写你的项目，每个项目可以写项目名称、时间、技术栈、成果指标。</p>
+        <div class="block">
+            <h3>车载平衡滚球运动控制系统 <span class="time">2026‑07 ~ 2026‑08</span></h3>
+            <p>视觉负责人 | K230端侧视觉跟踪项目</p>
+            <ul>
+                <li>完成AnchorBase模型量化NPU部署，调用AI2D硬件预处理，640×360分辨率实现全链路实时推理；UART串口100Hz稳定上报坐标给下位机做闭环控制。</li>
+                <li>设计检测/预测/重捕获/丢失四态跟踪状态机，融合速度滤波、运动外推算法，解决物体遮挡丢帧，降低误触发。</li>
+                <li>实现LCD轨迹可视化，20ms间隔记录轨迹；增加帧率统计、内存回收、异常捕获保障长时间稳定运行。</li>
+            </ul>
+        </div>
+        <div class="block">
+            <h3>PCB表面缺陷检测系统 <span class="time">2026‑09 ~ 2026‑10</span></h3>
+            <p>独立开发 | YOLOv8 + Flask Web检测平台</p>
+            <ul>
+                <li>训练识别漏孔、鼠咬、开路、短路、毛刺、伪铜六类PCB缺陷；测试集mAP@50=0.8926，漏孔召回率100%，模型权重仅6MB，支持CPU部署。</li>
+                <li>Web平台支持拖拽批量上传、推理可视化、CSV导出、历史记录管理；解决图片404、中文乱码、并发冲突等十余项工程问题。</li>
+                <li>封装训练、评估脚本，打通训练‑评估‑推理‑导出完整可复现链路。</li>
+            </ul>
+        </div>
+        <div class="block">
+            <h3>囤谷屋（GU_App）收藏管理应用 <span class="time">2025‑06 ~ 2025‑09</span></h3>
+            <p>独立开发 | Flask3 + SQLite本地Web应用</p>
+            <ul>
+                <li>后端约3500行代码，5个数据模型，41个路由；实现藏品全生命周期管理、盈亏统计、图片上传校验。</li>
+                <li>完整安全体系：密码加盐哈希、CSRF防护、登录与敏感操作限流、越权拦截、XSS防御。</li>
+                <li>SQLite自动备份轮转；搭建四层测试体系，合计1300+断言，冒烟测试全部通过。</li>
+            </ul>
+        </div>
+        <div class="block">
+            <h3>STM8L15x 单片机实验 <span class="time">2025‑03 ~ 2025‑05</span></h3>
+            <ul>
+                <li>完成ADC采集、PWM呼吸灯、OLED屏幕显示；掌握寄存器配置、串口调试、定时中断基础。</li>
+            </ul>
+        </div>
     </div>
 
     <!-- 技能特长 -->
     <div class="tab-panel" id="skill">
         <h2>技能特长</h2>
-        <p>编程语言、框架、硬件工具、证书等技能内容。</p>
+        <div class="block">
+            <h3>编程语言</h3>
+            <div class="skill-tag-group">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">C语言</span>
+                <span class="skill-tag">JavaScript</span>
+            </div>
+        </div>
+        <div class="block">
+            <h3>AI视觉</h3>
+            <div class="skill-tag-group">
+                <span class="skill-tag">YOLOv8</span>
+                <span class="skill-tag">OpenCV</span>
+                <span class="skill-tag">PyTorch</span>
+                <span class="skill-tag">NumPy</span>
+                <span class="skill-tag">K230 NPU部署</span>
+            </div>
+        </div>
+        <div class="block">
+            <h3>Web后端 & 数据库</h3>
+            <div class="skill-tag-group">
+                <span class="skill-tag">Flask</span>
+                <span class="skill-tag">SQLite</span>
+                <span class="skill-tag">HTML/CSS</span>
+                <span class="skill-tag">Vue3</span>
+            </div>
+        </div>
+        <div class="block">
+            <h3>嵌入式 & 工具</h3>
+            <div class="skill-tag-group">
+                <span class="skill-tag">STM8L</span>
+                <span class="skill-tag">CanMV IDE</span>
+                <span class="skill-tag">Keil</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">VS Code / PyCharm</span>
+            </div>
+        </div>
     </div>
 
-    <!-- 学习与探索 -->
+    <!-- 奖项证书 -->
     <div class="tab-panel" id="explore">
-        <h2>学习与探索</h2>
-        <p>学习笔记、技术博客、竞赛、开源、持续学习内容。</p>
+        <h2>奖项与证书</h2>
+        <div class="block">
+            <ul>
+                <li>蓝桥杯 Python B组 省三等奖（2025‑05）</li>
+                <li>校电子设计竞赛 二等奖（2025‑11）</li>
+                <li>1+X数据分析职业技能等级证书（初级）</li>
+                <li>CET‑4</li>
+            </ul>
+        </div>
     </div>
 
 <script>
@@ -225,10 +346,8 @@
     navLinks.forEach(link => {
         link.onclick = function(e) {
             e.preventDefault();
-            // 清除所有激活
             navLinks.forEach(a=>a.classList.remove('active'));
             panels.forEach(p=>p.classList.remove('active'));
-            // 当前激活
             this.classList.add('active');
             const targetId = this.dataset.target;
             document.getElementById(targetId).classList.add('active');
