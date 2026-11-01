@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>邱心如 - AI视觉软件开发 个人简历</title>
+    <title>个人简历</title>
     <style>
         * {
             margin: 0;
@@ -51,7 +51,6 @@
         }
         .item {
             margin-bottom:14px;
-            /* 动画相关 */
             opacity:0;
             transform: translateY(24px);
             transition: all 0.6s ease-out;
@@ -113,83 +112,52 @@
 <body>
 <div class="container">
     <div class="item show">
-        <h1>邱心如</h1>
-        <div class="title-line">求职意向：AI视觉软件开发 | 期望地点：深圳、东莞</div>
+        <h1>你的姓名</h1>
+        <div class="title-line">求职意向：XXX | 期望地点：XXX</div>
         <div class="contact">
-            邮箱：qiuqiuqiu_autumn@qq.com | Github：<a href="https://github.com/qiuqiuqiu-dot">github.com/qiuqiuqiu‑dot</a>
+            邮箱：xxx@xxx.com | Github：<a href="#">https://github.com/xxx</a>
         </div>
     </div>
 
     <div class="item">
         <h2>个人简介</h2>
-        <p class="summary">大专在读，主攻端侧AI视觉、嵌入式与全栈开发；熟练掌握Python，熟悉C语言，掌握YOLOv8、OpenCV、PyTorch、Flask等技术。拥有K230端侧部署、PCB缺陷检测Web系统、全功能Flask收藏管理应用项目经验，具备竞赛落地与完整工程调优能力。</p>
+        <p class="summary">在这里填写个人简介，描述技术方向、擅长领域、求职目标。</p>
     </div>
 
     <div class="item">
         <h2>教育经历</h2>
-        <div class="item-head">深圳职业技术大学 | 工业互联网技术（专科）<span>2024‑09 ~ 2027‑06</span></div>
-        <div class="item-desc">专业排名：10/75（前15%）｜GPA：3.16/4.0｜英语CET‑4</div>
-        <div class="item-desc">主修课程：Python程序设计、人工智能应用、操作系统、计算机网络、物联网智能硬件开发、Web开发</div>
-        <div class="item-desc">荣誉：国家励志奖学金、校级三等奖学金</div>
+        <div class="item-head">学校名称 | 专业 <span>开始时间 ~ 结束时间</span></div>
+        <div class="item-desc">GPA：xx / 4.0｜排名：xx｜英语：xxx</div>
+        <div class="item-desc">主修课程：课程1、课程2、课程3</div>
     </div>
 
     <div class="item">
         <h2>技能栈</h2>
         <div class="skill-wrap">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">C</span>
-            <span class="skill-tag">YOLOv8</span>
-            <span class="skill-tag">OpenCV</span>
-            <span class="skill-tag">PyTorch</span>
-            <span class="skill-tag">NumPy</span>
-            <span class="skill-tag">Flask</span>
-            <span class="skill-tag">SQLite</span>
-            <span class="skill-tag">Vue3</span>
-            <span class="skill-tag">HTML/CSS/JS</span>
-            <span class="skill-tag">K230 NPU部署</span>
-            <span class="skill-tag">STM8L</span>
-            <span class="skill-tag">CanMV IDE</span>
-            <span class="skill-tag">Git</span>
+            <span class="skill-tag">技能1</span>
+            <span class="skill-tag">技能2</span>
+            <span class="skill-tag">技能3</span>
+            <span class="skill-tag">技能4</span>
         </div>
     </div>
 
     <div class="item">
         <h2>项目经历</h2>
         <div class="item">
-            <div class="item-head">车载平衡滚球运动控制系统 <span>2026‑07 ~ 2026‑08</span></div>
-            <div class="item-desc">视觉负责人，基于K230 NPU实现钢球毫米级跟踪控制系统。</div>
+            <div class="item-head">项目一 <span>时间</span></div>
+            <div class="item-desc">项目简单介绍，项目定位与技术栈。</div>
             <ul class="item-highlight">
-                <li>完成AnchorBase模型量化NPU部署，调用AI2D硬件预处理，640×360分辨率实现全链路实时推理；UART串口100Hz稳定上报坐标给下位机做闭环控制。</li>
-                <li>设计检测/预测/重捕获/丢失四态跟踪状态机，融合速度滤波、运动外推算法，解决物体遮挡丢帧，降低误触发。</li>
-                <li>实现LCD轨迹可视化，20ms间隔记录轨迹，绘制位置‑时间曲线与OSD叠加；增加帧率统计、内存回收、异常捕获保障长时间稳定运行。</li>
+                <li>工作点1：做了什么，达成什么效果/指标</li>
+                <li>工作点2：解决的问题、工程优化点</li>
             </ul>
         </div>
 
         <div class="item">
-            <div class="item-head">PCB表面缺陷检测系统 <span>2026‑09 ~ 2026‑10</span></div>
-            <div class="item-desc">独立开发，YOLOv8n完成PCB 6类缺陷检测，Flask+SQLite实现Web批量检测平台。</div>
+            <div class="item-head">项目二 <span>时间</span></div>
+            <div class="item-desc">项目简单介绍，项目定位与技术栈。</div>
             <ul class="item-highlight">
-                <li>数据集训练漏孔、鼠咬、开路、短路、毛刺、伪铜六类缺陷；测试集mAP@50=0.8926，漏孔召回率100%，mAP@50‑95=0.4622，模型权重仅6MB，支持CPU部署。</li>
-                <li>针对毛刺小目标漏检做分辨率对齐、滑动切块验证优化；Web支持拖拽批量上传、推理可视化、置信度坐标输出、带UTF‑8 BOM的CSV导出、历史记录增删查改。</li>
-                <li>解决结果图404、中文导出乱码、并发导出串数据等十余项工程问题；封装train.py/assessment.py打通训练‑评估‑推理‑导出完整可复现链路。</li>
-            </ul>
-        </div>
-
-        <div class="item">
-            <div class="item-head">囤谷屋（GU_App）收藏管理应用 <span>2025‑06 ~ 2025‑09</span></div>
-            <div class="item-desc">Flask3 + SQLite 本地收藏账本，后端约3500行代码，5个数据模型，41个路由端点。</div>
-            <ul class="item-highlight">
-                <li>实现谷柜、在途、已出、心愿单、再贩提醒、同城换谷完整业务；自动盈亏统计、图片上传校验、EXIF转正、UUID安全命名。</li>
-                <li>完整安全体系：密码加盐哈希、CSRF防护、登录/敏感操作双套限流、资源越权拦截、XSS防御、账号注销三道校验。</li>
-                <li>SQLite定时自动备份（轮转保留14份）、zip导入导出；搭建四层测试体系，合计1300+断言，冒烟测试全部通过。</li>
-            </ul>
-        </div>
-
-        <div class="item">
-            <div class="item-head">STM8L15x 单片机实验 <span>2025‑03 ~ 2025‑05</span></div>
-            <div class="item-desc">STM8单片机外设基础开发</div>
-            <ul class="item-highlight">
-                <li>看懂寄存器配置，完成ADC采集、PWM呼吸灯、OLED屏幕显示；掌握串口调试、定时中断基础，独立调试驱动。</li>
+                <li>工作点1</li>
+                <li>工作点2</li>
             </ul>
         </div>
     </div>
@@ -198,17 +166,14 @@
         <h2>奖项证书</h2>
         <div class="item-highlight">
             <ul>
-                <li>蓝桥杯 Python B组 省三等奖（2025‑05）</li>
-                <li>校电子设计竞赛 二等奖（2025‑11）</li>
-                <li>1+X数据分析职业技能等级证书（初级）</li>
-                <li>CET‑4</li>
+                <li>奖项A（时间）</li>
+                <li>证书B（时间）</li>
             </ul>
         </div>
     </div>
 </div>
 
 <script>
-// 滚动观察器：滚动到视口的时候，加上show，触发动画
 const observer = new IntersectionObserver((entries)=>{
     entries.forEach(entry=>{
         if(entry.isIntersecting){
@@ -223,7 +188,6 @@ document.querySelectorAll('.item').forEach(el=>{
     observer.observe(el)
 })
 
-// 平滑滚动
 document.documentElement.style.scrollBehavior = "smooth"
 </script>
 </body>
