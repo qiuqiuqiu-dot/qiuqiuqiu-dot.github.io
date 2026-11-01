@@ -1,7 +1,7 @@
 {
   "name": "邱心如",
   "label": "AI视觉软件工程师 / 软件开发工程师",
-  "email": "qiuqiuqiu_autumn@qq.com",
+  "email": "qiuqiuqiu_a@shturl.",
   "github": "https://github.com/qiuqiuqiu-dot",
   "blog": "",
   "summary": "大专在读，主攻端侧AI视觉、嵌入式与全栈开发；熟悉YOLOv8、K230、STM8、Flask、Vue；有PCB缺陷检测、嵌入式单片机、Web大屏项目经验，具备竞赛落地能力，希望从事视觉算法应用、软件开发、软件测试相关岗位。",
@@ -49,7 +49,7 @@
         "K230端侧推理，降低上位机压力",
         "配套Web页面展示检测图片与记录"
       ],
-      "url": "https://github.com/xxx/xxx"
+      "url": "https://github.com/qiuqiuqiu-dot/xxx"
     },
     {
       "name": "囤谷屋 Flask 应用",
@@ -60,7 +60,7 @@
         "约3500行代码，独立完成后端与页面开发",
         "实现表单校验、数据持久化"
       ],
-      "url": "https://github.com/xxx/xxx"
+      "url": "https://github.com/qiuqiuqiu-dot/xxx"
     },
     {
       "name": "STM8L15x 单片机实验",
@@ -76,16 +76,16 @@
   ],
   "awards": [
     {
-      "title": "蓝桥杯 Python B组 省三等奖",
-      "date": "2025-05"
-    },
-    {
       "title": "校电子设计竞赛 二等奖",
       "date": "2025-11"
     },
     {
       "title": "1+X数据分析证书",
       "date": "2025-06"
+    },
+    {
+      "title": "蓝桥杯 Python B组 省三等奖",
+      "date": "2025-05"
     }
   ],
   "work": [],
