@@ -1,0 +1,99 @@
+{
+  "name": "邱心如",
+  "label": "AI视觉软件工程师 / 软件开发工程师",
+  "email": "qiuqiuqiu_autumn@qq.com",
+  "github": "https://github.com/qiuqiuqiu-dot",
+  "blog": "",
+  "summary": "大专在读，主攻端侧AI视觉、嵌入式与全栈开发；熟悉YOLOv8、K230、STM8、Flask、Vue；有PCB缺陷检测、嵌入式单片机、Web大屏项目经验，具备竞赛落地能力，希望从事视觉算法应用、软件开发、软件测试相关岗位。",
+  "education": [
+    {
+      "institution": "深圳职业技术大学",
+      "area": "工业互联网",
+      "studyType": "专科",
+      "startDate": "2024-09",
+      "endDate": "2027-06",
+      "score": "",
+      "courses": ["Python", "嵌入式开发", "Web前端", "数据分析"]
+    }
+  ],
+  "skills": [
+    {
+      "name": "AI视觉",
+      "keywords": ["YOLOv8", "K230", "NNCASE", "图像采集", "缺陷检测"]
+    },
+    {
+      "name": "后端 & 语言",
+      "keywords": ["Python", "Flask", "SQL", "MQTT"]
+    },
+    {
+      "name": "前端",
+      "keywords": ["Vue3", "HTML/CSS/JS", "低代码大屏"]
+    },
+    {
+      "name": "嵌入式",
+      "keywords": ["STM8L", "ADC", "PWM", "OLED", "OpenWrt"]
+    },
+    {
+      "name": "工具 & 证书",
+      "keywords": ["Git", "SolidWorks", "蓝桥杯Python省三", "1+X数据分析证书"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "K230 PCB缺陷检测系统",
+      "startDate": "2025-10",
+      "endDate": "2026-04",
+      "description": "基于YOLOv8训练PCB缺陷检测模型，NNCASE量化部署到K230，搭配Flask后端做结果上传、可视化管理，实现端侧实时检测。",
+      "highlights": [
+        "模型mAP@50达标，可识别多种PCB瑕疵",
+        "K230端侧推理，降低上位机压力",
+        "配套Web页面展示检测图片与记录"
+      ],
+      "url": "https://github.com/xxx/xxx"
+    },
+    {
+      "name": "囤谷屋 Flask 应用",
+      "startDate": "2025-06",
+      "endDate": "2025-09",
+      "description": "Flask + SQLite 开发的简易Web应用，实现数据增删改查、登录权限、本地存储功能。",
+      "highlights": [
+        "约3500行代码，独立完成后端与页面开发",
+        "实现表单校验、数据持久化"
+      ],
+      "url": "https://github.com/xxx/xxx"
+    },
+    {
+      "name": "STM8L15x 单片机实验",
+      "startDate": "2025-03",
+      "endDate": "2025-05",
+      "description": "STM8单片机基础实验，包含ADC采集、PWM呼吸灯、OLED屏幕显示。",
+      "highlights": [
+        "看懂寄存器配置，独立调试外设驱动",
+        "掌握串口调试、定时中断基础"
+      ],
+      "url": ""
+    }
+  ],
+  "awards": [
+    {
+      "title": "蓝桥杯 Python B组 省三等奖",
+      "date": "2025-05"
+    },
+    {
+      "title": "校电子设计竞赛 二等奖",
+      "date": "2025-11"
+    },
+    {
+      "title": "1+X数据分析证书",
+      "date": "2025-06"
+    }
+  ],
+  "work": [],
+  "references": [],
+  "config": {
+    "theme": "light",
+    "primaryColor": "#16a34a",
+    "language": "zh-CN",
+    "template": "template1"
+  }
+}
